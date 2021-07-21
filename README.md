@@ -1,7 +1,6 @@
 # Real-Time-Criminal-Face-Detection
 This project uses haarcascade classifier by open-cv to detect faces. This gives almost 100% accuracy on Indian face dataset. This can be used in CCTV cameras to detect criminal faces.
 
-
 **Create a folder data along with these files , and then the program is all set to run.**
 
 **Explanation:**
@@ -10,12 +9,11 @@ This project has 2 parts: First program to collect face data and second program 
 
 **Face Data Collection**
 
- 1. Read and show video stream from webcam, and capture images frame by frame.
-    
+ **1. Read and show video stream from webcam, and capture images frame by frame.**   
     cap = cv2.VideoCapture(0)
     ret,frame = cap.read()
     
- 2. Detect Faces and show bounding box using haarcascade classifier.
+ 2. **Detect Faces and show bounding box using haarcascade classifier.
     **Haar Cascade Classifier**
     Haar Cascade classifiers are an effective way for object detection. This method was proposed by Paul Viola and Michael Jones in their paper Rapid Object Detection using a 
     Boosted Cascade of Simple Features .Haar Cascade is a machine learning-based approach where a lot of positive and negative images are used to train the classifier. 
@@ -54,9 +52,18 @@ This project has 2 parts: First program to collect face data and second program 
     ![image](https://user-images.githubusercontent.com/43380724/125500468-4b9e215d-6490-42d5-907b-b034bd5b1e74.png)
 
     
- 3. Flatten the largest face image(gray scale) and save in a numpy array
+**3. Flatten the largest face image(gray scale) and save in a numpy array.**
  
- 4. Repeat the above for multiple people to generate training data
+**4. Repeat the above for multiple people to generate training data.**
+
 
 **Face Recognition**
 
+# 1. load the training data (numpy arrays of all the persons)
+      # x- values are stored in the numpy arrays
+      # y-values we need to assign for each person
+# 2. Read a video stream using opencv
+# 3. Extract faces out of it
+# 4. Use knn to find the prediction of face (int)
+# 5. Map the predicted id to name of the user 
+# 6. Display the predictions on the screen - bounding box and name
