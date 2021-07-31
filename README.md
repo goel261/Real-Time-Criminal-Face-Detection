@@ -79,6 +79,7 @@ This project has 2 parts: First program to collect face data and second program 
     This is done using Cascade Classifier.
 
 **4. Use knn to find the prediction of face (int)**
+
     KNN is used to find the label with maximum frequency after sorting the labels according to their frequency.
 
 **5. Map the predicted id to name of the user**
