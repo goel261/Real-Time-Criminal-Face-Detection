@@ -1,7 +1,15 @@
 # Real-Time-Criminal-Face-Detection
 This project uses haarcascade classifier by open-cv to detect faces. This gives almost 100% accuracy on Indian face dataset. This can be used in CCTV cameras to detect criminal faces.
 
-**Create a folder data along with these files , and then the program is all set to run.**
+**Detected Results**
+
+
+
+**How to run?**
+
+1) Create a folder named data along with these files.
+2) Run face_data_collect.py to store face data.
+3) Run face_recognition.py to detect faces.
 
 **Explanation:**
  
@@ -68,9 +76,12 @@ This project has 2 parts: First program to collect face data and second program 
 **2. Read a video stream using opencv**
 
 **3. Extract faces out of it.**
+    This is done using Cascade Classifier.
 
 **4. Use knn to find the prediction of face (int)**
+    KNN is used to find the label with maximum frequency after sorting the labels according to their frequency.
 
 **5. Map the predicted id to name of the user**
 
 **6. Display the predictions on the screen - bounding box and name**
+    Face section is drawn around the detected face and below which name and crime of the person is given.
